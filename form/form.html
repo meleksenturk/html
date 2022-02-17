@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+
+</head>
+
+<body>
+
+    <form action="index.hmtl" method="POST">
+
+        <!--
+            form ile bir form oluştururuz. action ifadesinin içine bilgileri
+            nereye göndereceğimizi belirtiriz. method olarak post ifadesini kullanmamızın
+            sebebi ise güvenliği sağlamaktır. get gönderilen bilgiler görünürdür.
+        -->
+
+        <input type="text" name="username" placeholder="Kullanici adiniz"><br><br>
+
+        <!--
+            input ile tipi text olan bir input kutusu elde ederiz. placeholder diyerek
+            kullanıcı adiniz yazısını saydam bir şekilde göstermeyi sağlarız.
+        -->
+
+        <input type="password" name="parola" placeholder="Parolanizi giriniz"><br><br>
+        <!--
+            inputun tipini password olarak belirlediğimzde kullanıcıdan bir şifre
+            girişi alacak kutumuzu oluşturmuş oluruz.
+        -->
+        
+        <p>Yasinizi giriniz</p>
+        <input type="number" name="yas"><br><br>
+        <!--
+            inputun tipini number olarak belirlediğimizde kullanıcıdan bir yas
+            girmesini bekleriz. bu kutuya sayı dışında bir ifade yazamayız.
+        -->
+
+
+        <p>Asagida verilen ifadelerden bir tanesini seciniz</p>
+
+        <input type="radio" name="eleman" id="eleman1"><label for="eleman1">Kırmızı</label>
+        <input type="radio" name="eleman" id="eleman2"><label for="eleman2">Sarı</label>
+
+        <!--
+            input tipini radio olarak belirlersek seçim yapabiliriz. Bir tane elamanı
+            seçmek için ise name kısımlarının aynı olması gereklidir. ancak her elemanın id ksıımları
+            farklı olmalıdır. label kullanarak ise falan id ye sahip elemanın etiketini filan yap diyebilirz.
+        -->
+
+        <p>Asagidaki isimlerden birkacını seciniz</p>
+
+        <input type="checkbox" name="eleman1" id="ali"><label for="ali">Ali</label>
+        <input type="checkbox" name="eleman2" id="ayse"><label for="ayse">Ayse</label>
+        <!--
+            input tipini checkbox olarak belirlersek birden fazla seçim yapabiliriz.Bu durumda
+            name kısımları farklı olmalıdır id kısımları zaten farklı olacaktır.
+        -->
+
+        <p>Asagida bir tarih seciniz</p>
+
+        <input type="date" name="tarih">
+        <!--
+            input tipini date olarak belirlediğimizde tarih seçimi yapabiliriz.
+        -->
+
+        <p>Asagida tarih ve saat seciniz</p>
+        <input type="datetime-local" name="tarih">
+        <!--
+            Tarih ve saat secimi için datetime-local ifadesini kullanırız.
+        -->
+
+        <p>Bir resim ekleyiniz</p>
+        <input type="file" name="resim">
+        <!--
+            input tipini file olarak belirlersek bilgisayarimizdan resim secimi
+            yapabiliriz.
+        -->
+
+        <p>Asagidan bir il seciniz</p>
+        <select name="secim">
+            <option>Birini seciniz</option>
+            <option value="Ankara">Ankara</option>
+            <option value="Istanbul">Istanbul</option>
+        </select>
+        <br><br>
+        <!--
+            select i kullanarak seçim kutusu olusturabiliriz. option kullanarak ise
+            secilecek degerleri veririz.
+        -->
+
+        <input type="submit" name="gonder" value="gonder">
+        <!--
+            input tipini submit olarak secerek gonder isimli bir buton olusturabiliriz.
+        -->
+    </form>
+</body>
+</html>
